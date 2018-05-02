@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+.plusNav.plus {
+    background: #1a1a1a;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+    margin-top: 15px;
+}
+
+html, body.plus {
+    margin: 0; 
+    padding: 0; 
+    font-family: Roboto; 
+    min-height: 100%; 
+}
+
+body.plus {
+    padding: 0 0 40px; 
+    color: #333; 
+    background: #ED910C; 
+}
+
+h1, h2, h3, h4.plus {
+    font-family: Roboto; 
+    font-weight: 300; 
+    color: #444; 
+    text-align: center; 
+}
+
+small.plus {
+    color: #555; 
+}
+
+header.plus {
+    background: #1a1a1a; 
+    box-shadow: 0 1px 0 0 rgba(0,0,0,.6); 
+}
+
+nav.plus {
+    padding-top: 15px; 
+    padding-bottom: 15px; 
+    margin: 0 auto; 
+/*    max-width: 800px; */
+    position: relative; 
+}
+
+nav .menu.plus {
+    margin-top: 15px; 
+    float: right; 
+    position: absolute;
+    top: 10%;
+    left: 40%;
+ /*   width: 600px;*/
+}
+
+a.plus {
+    text-decoration: none; 
+    color: #ff7761; 
+}
+
+.menu li.plus {
+    float: left; 
+    margin: 0 10px; 
+}
+
+.menu li a, #logout.plus {
+    background: transparent; 
+    cursor: pointer; 
+    border: 0; 
+    font-size: 16px; 
+    display: inline-block; 
+    color: #fff; 
+    text-align: center; 
+    height: 30px; 
+    line-height: 30px; 
+    padding: 0 10px; 
+    text-decoration: none; 
+}
+
+#logo.plus {
+    max-height:50px; 
+    font-size: 50px;
+}
+
+#chooseLanguage.plus {
+    top: 15px; 
+    right: 35px; 
+    position: absolute; 
+}
+
+#chooseLanguage li.plus {
+    float: left; 
+}
+
+#chooseLanguage button.plus {
+    cursor: pointer; 
+    margin-left: 8px; 
+    width: 18px; 
+    height: 18px; 
+    border-radius: 9px; 
+    opacity: 0.6; 
+    border: 1px solid #222; 
+    background-size: 100%; 
+}
+
+#chooseLanguage button:hover.plus {
+    opacity: 0.8; 
+}
+
+main.plus {
+    margin: auto; 
+    padding: 15px; 
+}
+
+#content.plus {
+    padding: 15px; 
+    background: #fff; 
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); 
+    width:25%; 
+    margin:0 auto; 
+    border-radius: 5px; 
+    min-width:300px; 
+}
+
+footer.plus {
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    height: 40px; 
+    line-height: 40px; 
+    width: 100%; 
+    text-align: center; 
+    background: #fff; 
+    border-top: 1px solid #f9a11b; 
+    font-size: 14px; 
+}
+
+nav ul, nav li.plus {
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
+}
+
+/* Needlessly fancy menu hover effect */
+
+.menu li.plus {
+    position: relative; 
+}
+
+.menu li a::after, #logout:after {
+    position: absolute; 
+    top: 28px; 
+    left: 0; 
+    width: 100%; 
+    height: 4px; 
+    background: rgba(255, 255, 255, 0.5); 
+    border-radius: 5px; 
+    content: ''; 
+    opacity: 0; 
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s; 
+    transition: opacity 0.3s, transform 0.3s; 
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+#logout:hover::after,
+#logout:focus::after,
+.menu li a:hover::after,
+.menu li a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* Very basic grid */
+.row.plus {
+    width: 100%;
+    overflow: auto;
+}
+
+.row > *.plus {
+    float: left;
+}
+
+.row-2 .col.plus {
+    width: 49%
+}
+
+.row-2 .col:nth-child(odd).plus {
+    margin: 0% 1% 0% 0%
+}
+
+.row-2 .col:nth-child(even).plus {
+    margin: 0% 0% 0% 1%
+}
+
+.row-3 .col.plus {
+    width: 32%
+}
+
+.row-3 .col:nth-child(3n+1).plus {
+    margin: 0% 1% 0% 0%
+}
+
+.row-3 .col:nth-child(3n+2).plus {
+    margin: 0% 1% 0% 1%
+}
+
+.row-3 .col:nth-child(3n+3).plus {
+    margin: 0% 0% 0% 1%
+}
+
+@media screen and (max-width: 550px).plus {
+    .row .col:nth-child(n).plus {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.col img.plus {
+    display: block;
+    width: 100%;
+}
+
+/* Book related stuff */
+
+a.book.plus {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a.book:hover.plus {
+    background: #e2e9f5;
+}
+
+a .bookCover.plus {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a .bookCover img.plus {
+    border-radius: 5px;
+    min-height: 200px;
+    max-height: 200px;
+    width: auto;
+}
+
+.bookCover img.plus {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Login Form */
+
+#loginForm.plus {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#loginForm label.plus {
+    display: block;
+    width: 100%
+}
+
+#loginForm input.plus {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    width: 100%;
+    border-radius: 3px;
+    margin: 2px 0 20px 0;
+}
+
+#loginForm input[type="submit"].plus {
+    color: white;
+    background: #274555;
+    border: 0;
+    cursor: pointer;
+}
+
+.notification.plus {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border-radius: 3px;
+    text-align:center;
+}
+
+.good.notification.plus {
+    background: #008900;
+}
+
+.bad.notification.plus {
+    background: #bb0000;
+}

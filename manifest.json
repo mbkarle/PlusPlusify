@@ -1,0 +1,45 @@
+{
+    "name": "PlusPlusify",
+    "version": "1.0",
+    "description": "Make your plus a plusplus",
+    "options_page": "options.html",
+    "permissions": ["activeTab", "declarativeContent", "storage" ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts":[
+    {
+        "matches": ["https://hac40.eschoolplus.powerschool.com/*"],
+        "js": ["utilities.js"],
+        "run_at": "document_start"
+    },
+    {
+        "matches": ["https://hac40.eschoolplus.powerschool.com/*"],
+        "js": [ "jquery-3.3.1.min.js", "injectCSS.js", "UI.js"]
+    },
+    {
+        "matches": ["https://hac40.eschoolplus.powerschool.com/*/Schedule"],
+        "js": ["schedule.js"],
+        //"css": ["plusplusSchedule.css", "plusplusMain.css"],
+        "run_at": "document_end"
+    }
+    ],
+    "page_action": {
+        "default_popup": "options.html",
+        "default_icon": {
+            "16": "images/plusplus16.png",
+            "32": "images/plusplus32.png",
+            "48": "images/plusplus48.png",
+            "128": "images/plusplus128.png"
+        }
+    },
+    "icons": {
+            "16": "images/plusplus16.png",
+            "32": "images/plusplus32.png",
+            "48": "images/plusplus48.png",
+            "128": "images/plusplus128.png"
+    },
+    "web_accessible_resources": ["styles/*"],
+    "manifest_version": 2
+}
